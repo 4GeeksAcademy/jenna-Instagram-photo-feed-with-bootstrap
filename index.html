@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenna Instagram Photo Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        .navbar-brand img {
+            height: 30px;
+        }
+        .navbar-nav .nav-link {
+            color: #262626;
+            padding: 10px;
+        }
+        .post-card {
+            background-color: #ebebeb;
+            border: 1px solid #dbdbdb;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+        .post-card img {
+            width: 100%;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        .post-header {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .post-header h5 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        .post-header small {
+            color: #8e8e8e;
+        }
+        .post-body {
+            padding: 10px;
+        }
+        .post-body p {
+            margin: 0;
+        }
+        .modal-body input, .modal-body textarea {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="./images/instagram.jpg" alt="Instagram Logo">
+        </a>
+        <div class="ml-auto d-flex">
+            <a class="nav-link view-grid" href="#"><i class="fas fa-th"></i></a>
+            <a class="nav-link view-single" href="#"><i class="fas fa-circle"></i></a>
+            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createNewPostModal">Create a new post</button>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">See Latest Feed</a>
+                    <a class="dropdown-item" href="#">My Profile</a>
+                    <a class="dropdown-item" href="index.html">Click to Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Container -->
+    <div class="container mt-4">
+        <div class="row photo-feed">
+
+
+            <div class="col-lg-4 col-md-6 col-12 post-card">
+                <div class="post-header">
+                    <h5>Beautiful Nature</h5>
+                    <small>09/24</small>
+                </div>
+                <img src="./images/nature1.jpg" style="width: fit-content; height: fit-content;" alt="Nature">
+                <div class="post-body">
+                    <p><strong>604 Likes</strong></p>
+                    <p>I admire Beautiful Environment.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 post-card">
+                <div class="post-header">
+                    <h5>Nature is Great!</h5>
+                    <small>07/24</small>
+                </div>
+                <img src="./images/nature2.jpg" style="width: fit-content; height: fit-content;" alt="Nature">
+                <div class="post-body">
+                    <p><strong>190 Likes</strong></p>
+                    <p>Such a Beautiful place to visit</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 post-card">
+                <div class="post-header">
+                    <h5>My son and I taking a stroll</h5>
+                    <small>08/24</small>
+                </div>
+                <img src="./images/nature3.jpg" style="width: fit-content; height: fit-content;" alt="Car">
+                <div class="post-body">
+                    <p><strong>100 Likes</strong></p>
+                    <p>We are chilling out here!</p>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-md-6 col-12 post-card">
+                <div class="post-header">
+                    <h5>Car Racing!</h5>
+                    <small>09/24</small>
+                </div>
+                <img src="./images/cars_trip.jpg" style="width: fit-content; height: fit-content;" alt="Car Racing">
+                <div class="post-body">
+                    <p><strong>204 Likes</strong></p>
+                    <p>Holla! I like car racing and speeding.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 post-card">
+                <div class="post-header">
+                    <h5>Hello Everyone! See My Crazy dog Spark!</h5>
+                    <small>07/24</small>
+                </div>
+                <img src="./images/dog.jpg" style="width: fit-content; height: fit-content;" alt="Dog">
+                <div class="post-body">
+                    <p><strong>401 Likes</strong></p>
+                    <p>Hello Everyone! See My Crazy dog Spark! I present to you my Crazy Dogs. Its fun having you as a pet.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 post-card">
+                <div class="post-header">
+                    <h5>My favorite Car</h5>
+                    <small>05/24</small>
+                </div>
+                <img src="./images/car1.jpg" style="width: fit-content; height: fit-content;" alt="Car">
+                <div class="post-body">
+                    <p><strong>10010 Likes</strong></p>
+                    <p>This is my favorite dream car</p>
+                </div>
+            </div>
+
+            <!-- Add more post-cards as needed -->
+        </div>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div class="modal fade" id="createNewPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createPostModalLabel">Create a New Post</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Title">
+                    <input type="file" class="form-control-file">
+                    <textarea class="form-control" rows="3" placeholder="Enter Post Description"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.view-grid').click(function(){
+                $('.photo-feed').removeClass('col-12').addClass('row');
+                $('.post-card').removeClass('col-12').addClass('col-lg-4 col-md-6 col-12');
+            });
+            $('.view-single').click(function(){
+                $('.photo-feed').removeClass('row').addClass('col-12');
+                $('.post-card').removeClass('col-lg-4 col-md-6 col-12').addClass('col-12');
+            });
+        });
+    </script>
+</body>
+</html>
